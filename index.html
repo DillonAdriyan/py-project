@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://dillonadriyan.me/icon.ico" type="image/x-icon" />
+  <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dillon Adriyan",
+    "url": "https://dillonadriyan.me/",
+    "alternateName": ["DillonAdriyan", "Dillon Corp", "dillonadriyan.me"],
+    "datePublished": "2023-11-26T08:00:00+08:00",
+    "dateModified": "2024-05-26T09:20:00+08:00"
+   }
+  </script>
+  <script>
+   (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+     j = d.createElement(s),
+     dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+   })(window, document, "script", "dataLayer", "GTM-PB6M6X3S");
+  </script>
+  <meta
+   name="description"
+   content="Hello, I'm Dillon Adriyan from Indonesia. I create websites for businesses using the Bootstrap framework."
+  />
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="src/style.css" type="text/css" media="all" />
+  <!-- AOS -->
+  <!-- Google tag (gtag.js) -->
+  <script
+   async
+   src="https://www.googletagmanager.com/gtag/js?id=G-JF3TEPT0FH"
+  ></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() {
+    dataLayer.push(arguments);
+   }
+   gtag("js", new Date());
+   gtag("config", "G-JF3TEPT0FH");
+  </script>
+  <title>Linktree</title>
+ </head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+    <div class="container mx-auto p-8 bg-white shadow-lg rounded-lg max-w-lg">
+        <h1 class="text-3xl font-bold text-center mb-2 text-gray-800">Check Non-Followers</h1>
+        <h2 class="text-md text-center text-gray-700 mb-8">Cek siapa yang tidak mengikuti anda balik</h2>
+
+        <form id="uploadForm" enctype="multipart/form-data" class="space-y-6">
+            <!-- Followers File Input -->
+            <div class="relative">
+                <label for="followers" class="block text-sm font-medium text-gray-700 mb-2">Upload Followers JSON:</label>
+                <input type="file" id="followers" name="followers_file" class="sr-only">
+                <label for="followers" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-md text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 cursor-pointer transition duration-200">
+                    <span>Select Followers File</span>
+                    <svg class="ml-2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </label>
+                <p id="followers-file-name" class="text-xs text-gray-500 mt-1"></p>
+            </div>
+
+            <!-- Following File Input -->
+            <div class="relative">
+                <label for="following" class="block text-sm font-medium text-gray-700 mb-2">Upload Following JSON:</label>
+                <input type="file" id="following" name="following_file" class="sr-only">
+                <label for="following" class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-md text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 cursor-pointer transition duration-200">
+                    <span>Select Following File</span>
+                    <svg class="ml-2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </label>
+                <p id="following-file-name" class="text-xs text-gray-500 mt-1"></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md shadow-md hover:bg-blue-700 transition duration-200">
+                Submit
+            </button>
+        </form>
+<p class="my-2">Tutorial download json nya <a href="https://pirg.org/resources/how-to-request-and-download-instagram-data/" class="font-medium text-sky-600 hover:text-gray-400 transition duration-200">disini</a></p>
+<p class="text-gray-600 text-sm"> <span class="font-semibold text-red-400">* NOTE : </span>Saat akan mengunduh informasi, pilih yang Beberapa informasi anda, scroll bawah cari Koneksi dan centang yang Pengikut saja.
+</p>
+
+        <!-- Non-Followers Section -->
+        <div class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">List Non-Followers</h2>
+            <div id="nonFollowersList" class="list-disc p-2 text-gray-600 gap-2 list-none grid grid-cols-2">
+                <!-- Example of styled list items -->
+                
+            </div>
+            <p id="loading" class="text-center text-blue-500 mt-4 hidden">Loading...</p>
+            <p id="error_text" class="text-center text-red-500 mt-4"></p>
+        </div>
+    </div>
+
+    <script>
+        // Display file name after selecting a file
+        document.getElementById('followers').addEventListener('change', function() {
+            document.getElementById('followers-file-name').textContent = this.files[0].name;
+        });
+        document.getElementById('following').addEventListener('change', function() {
+            document.getElementById('following-file-name').textContent = this.files[0].name;
+        });
+
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Reset error message and show loading
+            const errorText = document.getElementById('error_text');
+            errorText.textContent = '';
+
+            const loadingIndicator = document.getElementById('loading');
+            loadingIndicator.classList.remove('hidden');
+
+            // Grab the files
+            const formData = new FormData();
+            formData.append('followers_file', document.getElementById('followers').files[0]);
+            formData.append('following_file', document.getElementById('following').files[0]);
+
+            // Post to API
+            fetch('http://127.0.0.1:8000/api/check-followers/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                loadingIndicator.classList.add('hidden');
+
+                const nonFollowersList = document.getElementById('nonFollowersList');
+                nonFollowersList.innerHTML = '';
+
+                data.non_followers.forEach(user => {
+                    const divText = document.createElement('div');
+                    const textItem = document.createElement('p');
+                    const linkItem = document.createElement('a');
+                    divText.className = "bg-gray-100 p-2 rounded-md shadow hover:bg-gray-200 transition duration-200";
+                    
+                    textItem.className = "text-sm";
+                    textItem.textContent = user;
+                    linkItem.href = `https://instagram.com/${user}`;
+                    divText.appendChild(textItem);
+                    linkItem.appendChild(divText)
+                    nonFollowersList.appendChild(linkItem);
+                });
+            })
+            .catch(error => {
+                loadingIndicator.classList.add('hidden');
+                errorText.textContent = `Error: ${error.message}`;
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
