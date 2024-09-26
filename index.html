@@ -129,7 +129,7 @@
             formData.append('following_file', document.getElementById('following').files[0]);
 
             // Post to API
-            fetch('http://127.0.0.1:8000/api/check-followers/', {
+            fetch('https://daezyyy.pythonanywhere.com/api/check-followers/', {
                 method: 'POST',
                 body: formData
             })
