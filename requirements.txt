@@ -1,0 +1,7 @@
+pandas
+numpy
+tensorflow
+beautifulsoup4
+tqdm
+requests
+reportlab
