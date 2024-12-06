@@ -1,0 +1,25 @@
+Total Commands Used: 2659
+
+Top 10 Base Commands:
+1. git - 440 times
+2. python - 410 times
+3. cd - 338 times
+4. ls - 276 times
+5. pip - 153 times
+6. npm - 114 times
+7. source - 100 times
+8. apt - 79 times
+9. npx - 66 times
+10. hydra - 55 times
+
+Top 10 Full Command Invocations:
+1. ls - 275 times
+2. python manage.py runserver - 162 times
+3. git add . - 79 times
+4. git push origin main - 65 times
+5. python manage.py migrate - 56 times
+6. cd .. - 55 times
+7. cd app-studio - 51 times
+8. mc - 47 times
+9. cd - 47 times
+10. la - 35 times
