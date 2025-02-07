@@ -1,0 +1,121 @@
+{
+  "store_info": {
+    "location": "Pemalang, Jawa Tengah",
+    "processing_time": "Maksimal 1 hari",
+    "additional_options": ["Uang", "Coklat", "Snack"]
+  },
+  "products": [
+    {
+      "category": "Buket Romantis",
+      "items": [
+        {
+          "name": "Buket Eternal Harmony",
+          "price": ["Rp 450.000", "Rp 750.000"],
+          "size": ["Medium (30cm)", "Large (50cm)"],
+          "description": "Kombinasi mawar merah premium, gypsophila, dan eucalyptus segar.",
+          "packaging": "Dibungkus dengan kertas satin merah elegan dan pita emas.",
+          "customizable": true,
+          "extras": ["Coklat", "Snack"],
+          "image": "https://source.unsplash.com/random/400x600?romantic+rose+bouquet"
+        },
+        {
+          "name": "Buket Serenade of Love",
+          "price": "Rp 550.000",
+          "description": "Paduan mawar pink, ranunculus, dan daun silver dollar dengan mini LED fairy lights untuk kesan romantis malam hari.",
+          "packaging": "Box premium dengan aksen pita satin pink.",
+          "customizable": true,
+          "extras": ["Uang", "Coklat"],
+          "image": "https://source.unsplash.com/random/400x600?pink+rose+bouquet"
+        }
+      ]
+    },
+    {
+      "category": "Buket Ulang Tahun",
+      "items": [
+        {
+          "name": "Buket Joyful Celebration",
+          "price": "Rp 400.000",
+          "description": "Gerbera, krisan, dan lisianthus dengan balon mini.",
+          "packaging": "Dikemas dengan plastik transparan dan pita warna-warni.",
+          "customizable": true,
+          "extras": ["Coklat", "Snack"],
+          "image": "https://source.unsplash.com/random/400x600?birthday+bouquet"
+        },
+        {
+          "name": "Buket Golden Sunshine",
+          "price": "Rp 500.000",
+          "description": "Bunga matahari, solidago, dan baby’s breath dalam kotak kayu rustic.",
+          "packaging": "Kotak kayu premium dengan ukiran personalisasi (opsional).",
+          "customizable": true,
+          "extras": ["Uang", "Coklat"],
+          "image": "https://source.unsplash.com/random/400x600?sunflower+bouquet"
+        }
+      ]
+    },
+    {
+      "category": "Buket Pernikahan",
+      "items": [
+        {
+          "name": "Buket Bridal Elegance",
+          "price": "Rp 650.000",
+          "description": "Lily putih, hydrangea, dan baby’s breath.",
+          "packaging": "Dikemas dengan kain satin putih premium.",
+          "customizable": false,
+          "extras": ["Coklat"],
+          "image": "https://source.unsplash.com/random/400x600?bridal+bouquet"
+        },
+        {
+          "name": "Buket Vintage Romance",
+          "price": "Rp 700.000",
+          "description": "Mawar garden cream, dried lavender, dan biji-biji kopi Pemalang sebagai aromaterapi.",
+          "packaging": "Kotak kayu dengan pita renda vintage.",
+          "customizable": true,
+          "extras": ["Snack"],
+          "image": "https://source.unsplash.com/random/400x600?vintage+rose+bouquet"
+        }
+      ]
+    },
+    {
+      "category": "Buket Duka (Sympathy)",
+      "items": [
+        {
+          "name": "Buket White Serenity",
+          "price": "Rp 500.000",
+          "description": "Lily putih, krisan putih, dan eucalyptus hijau. Dikirim dengan kartu ucapan berkaligrafi.",
+          "packaging": "Dibungkus dengan kain putih polos dan pita perak.",
+          "customizable": false,
+          "extras": ["None"],
+          "image": "https://source.unsplash.com/random/400x600?white+sympathy+bouquet"
+        }
+      ]
+    },
+    {
+      "category": "Buket Graduation",
+      "items": [
+        {
+          "name": "Buket Bright Future",
+          "price": "Rp 480.000",
+          "description": "Bunga aster ungu, delphinium biru, dan pita bertuliskan 'Congrats Grad!'.",
+          "packaging": "Box eksklusif dengan hiasan pita emas.",
+          "customizable": true,
+          "extras": ["Uang", "Snack"],
+          "image": "https://source.unsplash.com/random/400x600?graduation+bouquet"
+        }
+      ]
+    },
+    {
+      "category": "Buket Corporate",
+      "items": [
+        {
+          "name": "Buket Executive Charm",
+          "price": "Rp 800.000",
+          "description": "Anggrek dendrobium, monstera leaf, dan batang bambu dalam pot modern. Cocok untuk grand opening atau ucapan terima kasih klien.",
+          "packaging": "Pot modern dengan kartu ucapan premium.",
+          "customizable": false,
+          "extras": ["None"],
+          "image": "https://source.unsplash.com/random/400x600?corporate+bouquet"
+        }
+      ]
+    }
+  ]
+}

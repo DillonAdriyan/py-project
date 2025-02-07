@@ -1,1 +1,7 @@
-/*.json
+aiProduk/retrival_trained.py/*
+aiProduk/checkpoints/*
+aiProduk/fine_tuned_product_model/*
+aiProduk/fine_tuned_product_model/*
+aiProduk/t5_finetuned_product_qa/*
+aiProduk/__pycache__/*
+aiProduk/.ipynb_checkpoints/*

@@ -78,10 +78,10 @@ if __name__ == "__main__":
     # File input dan output untuk followers dan following
     
     # sesuaikan nama file json dari Instagram biasanya adalah followers_1.json
-    followers_input = 'followersMentah.json'
+    followers_input = 'followers_1.json'
     
     # sesuaikan nama file json dari Instagram biasanya adalah following.json
-    following_input = 'followingMentah.json'
+    following_input = 'following.json'
     
     # output file nantinya
     followers_output = 'usernameFollower.json'
